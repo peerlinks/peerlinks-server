@@ -16,6 +16,7 @@ async function main(configFile) {
   const rawConfig = fs.readFileSync(argv.config + '').toString();
   const config = {
     port: 3000,
+    host: '127.0.0.1',
     ...JSON.parse(rawConfig),
   };
 
@@ -23,7 +24,7 @@ async function main(configFile) {
 
   const server = micro(service);
 
-  server.listen(config.port, () => {
+  server.listen(config.port, config.host, () => {
     console.error('Listening on %j', server.address());
   });
 }
