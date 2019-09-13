@@ -13,6 +13,56 @@ vim config.json # change passphrase, httpToken and other defaults
 npm start
 ```
 
+## REST
+
+Following APIs are available on `config.port` / `config.host`.
+`Authorization: bearer <config.httpToken>` header must be set for all
+requests except `/`.
+
+### GET `/`
+
+Return current version of the server.
+
+Response:
+```json
+{ "version": "1.0.0" }
+```
+
+### PUT `/new-feed`
+
+Subscribe to a feed using feed URL.
+
+Request:
+```json
+{
+  "feedURL": "vowlink://feed/..."
+}
+```
+
+Response:
+```json
+{
+  "ok": true
+}
+```
+
+### PUT `/request-invite`
+
+Generate invite request code.
+
+Request:
+```json
+{}
+```
+
+Response:
+```json
+{
+  "ok": true,
+  "command": "/invite <config.identity> ..."
+}
+```
+
 ## LICENSE
 
 This software is licensed under the MIT License.
