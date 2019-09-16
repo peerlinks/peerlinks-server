@@ -1,12 +1,12 @@
-# vowlink-server
+# peerlinks-server
 
-Seeding server for [VowLink] protocol.
+Seeding server for [PeerLinks] protocol.
 
 ## Usage
 
 ```sh
-git clone git://github.com/vowlink/vowlink-server
-cd vowlink-server
+git clone git://github.com/peerlinks/peerlinks-server
+cd peerlinks-server
 npm i
 cp -rf example-config.json config.json
 vim config.json # change passphrase, httpToken and other defaults
@@ -35,7 +35,7 @@ Subscribe to a feed using feed URL.
 Request:
 ```json
 {
-  "feedURL": "vowlink://feed/..."
+  "feedURL": "peerlinks://feed/..."
 }
 ```
 
@@ -88,4 +88,4 @@ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[VowLink]: https://github.com/vowlink/vowlink
+[PeerLinks]: https://github.com/peerlinks/peerlinks

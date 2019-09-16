@@ -2,7 +2,7 @@
   "httpToken": "secret",
 
   "passphrase": "secret",
-  "db": "./vowlink.sqlite",
-  "identity": "vowlink-node-1",
+  "db": "./peerlinks.sqlite",
+  "identity": "peerlinks-node-1",
   "port": 3000
 }
