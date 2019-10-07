@@ -5,6 +5,8 @@
   "main": "lib/node.js",
   "scripts": {
     "start": "node -r esm bin/server.js",
+    "lint": "eslint lib bin",
+    "lint:fix": "npm run lint -- --fix",
     "test": "mocha --reporter=spec test/*-test.js"
   },
   "repository": {
@@ -25,13 +27,16 @@
   },
   "homepage": "https://github.com/peerlinks/peerlinks-server#readme",
   "dependencies": {
-    "@peerlinks/protocol": "^7.3.1",
-    "@peerlinks/sqlite-storage": "^3.0.0",
+    "@peerlinks/protocol": "^7.4.1",
+    "@peerlinks/sqlite-storage": "^3.0.1",
     "@peerlinks/swarm": "^3.0.3",
     "bs58": "^4.0.1",
     "esm": "^3.2.25",
     "micro": "^9.3.4",
     "sodium-universal": "^2.0.0",
-    "yargs": "^14.0.0"
+    "yargs": "^14.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1"
   }
 }

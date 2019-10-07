@@ -1,7 +1,7 @@
+/* eslint-env node */
 'use strict';
 
 import fs from 'fs';
-import http from 'http';
 import yargs from 'yargs';
 import micro from 'micro';
 
@@ -12,7 +12,7 @@ const argv = yargs
 
 import createService from '../lib/service';
 
-async function main(configFile) {
+async function main() {
   const rawConfig = fs.readFileSync(argv.config + '').toString();
   const config = {
     port: 3000,
